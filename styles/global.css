@@ -148,7 +148,7 @@ footer {
 }
 
 body header {
-  background-color: black;
+  background-color: #0e0e0e;
 }
 body header .header_container {
   max-width: 1440px;
@@ -156,15 +156,32 @@ body header .header_container {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  background-color: black;
 }
 body header .header_container .header_content {
   max-width: 1100px;
   width: 100%;
-  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+body header .header_container .header_content .logo img {
+  width: 140px;
+}
+body header .header_container .header_content .navigation nav ul {
+  display: flex;
+  align-items: center;
+}
+body header .header_container .header_content .navigation nav ul li {
+  margin: 0px 25px;
+}
+body header .header_container .header_content .navigation nav ul li a {
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+body header .header_container .header_content .cart a img {
+  width: 23px;
 }
 body header .underline {
   max-width: 1110px;
@@ -172,4 +189,54 @@ body header .underline {
   margin: 0 auto;
   background-color: #979797;
   height: 1px;
+}
+body header .hero_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+body header .hero_container .hero_text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+body header .hero_container .hero_text .new_product h3 {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+body header .hero_container .hero_text .product_name {
+  margin: 24px 0px;
+}
+body header .hero_container .hero_text .product_name h1 {
+  font-size: 56px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+body header .hero_container .hero_text .product_desc p {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 25px;
+  max-width: 350px;
+}
+body header .hero_container .hero_text .view_product {
+  margin-top: 40px;
+}
+body header .hero_container .hero_text .view_product button {
+  font-size: 13px;
+  color: #ffffff;
+  border: none;
+  padding: 15px 34px;
+  background-color: #d87d4a;
+}
+body header .hero_container .hero_img {
+  width: 60%;
+}
+body header .hero_container .hero_img img {
+  width: 100%;
 }/*# sourceMappingURL=global.css.map */
