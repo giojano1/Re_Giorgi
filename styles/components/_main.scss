@@ -10,12 +10,12 @@ body {
         width: 100%;
         margin: 0 auto;
         .hero_text {
-          width: 45%;
+          flex: 0.4;
           display: flex;
           flex-direction: column;
           margin-right: 40px;
           .new_product {
-            h3 {
+            span {
               color: $main-white;
               font-size: 14px;
               letter-spacing: 10px;
@@ -23,7 +23,7 @@ body {
           }
           .product_name {
             margin: 24px 0px;
-            h1 {
+            h2 {
               font-size: 56px;
               color: $main-white;
               letter-spacing: 2px;
@@ -50,7 +50,7 @@ body {
           }
         }
         .hero_img {
-          width: 60%;
+          flex: 0.6;
           img {
             width: 100%;
           }

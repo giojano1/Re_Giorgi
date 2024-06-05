@@ -167,8 +167,8 @@ body header .header_container .header_content .navigation nav ul {
   display: flex;
   align-items: center;
 }
-body header .header_container .header_content .navigation nav ul li {
-  margin: 0px 25px;
+body header .header_container .header_content .navigation nav ul *:not(:last-child) {
+  margin-right: 50px;
 }
 body header .header_container .header_content .navigation nav ul li a {
   font-size: 13px;
@@ -199,12 +199,12 @@ body main .hero_container .hero_content {
   margin: 0 auto;
 }
 body main .hero_container .hero_content .hero_text {
-  width: 45%;
+  flex: 0.4;
   display: flex;
   flex-direction: column;
   margin-right: 40px;
 }
-body main .hero_container .hero_content .hero_text .new_product h3 {
+body main .hero_container .hero_content .hero_text .new_product span {
   color: #ffffff;
   font-size: 14px;
   letter-spacing: 10px;
@@ -212,7 +212,7 @@ body main .hero_container .hero_content .hero_text .new_product h3 {
 body main .hero_container .hero_content .hero_text .product_name {
   margin: 24px 0px;
 }
-body main .hero_container .hero_content .hero_text .product_name h1 {
+body main .hero_container .hero_content .hero_text .product_name h2 {
   font-size: 56px;
   color: #ffffff;
   letter-spacing: 2px;
@@ -235,7 +235,7 @@ body main .hero_container .hero_content .hero_text .view_product button {
   background-color: #d87d4a;
 }
 body main .hero_container .hero_content .hero_img {
-  width: 60%;
+  flex: 0.6;
 }
 body main .hero_container .hero_content .hero_img img {
   width: 100%;

@@ -23,8 +23,10 @@ body {
             ul {
               display: flex;
               align-items: center;
+              *:not(:last-child) {
+                margin-right: 50px;
+              }
               li {
-                margin: 0px 25px;
                 a {
                   font-size: 13px;
                   color: $main-white;
