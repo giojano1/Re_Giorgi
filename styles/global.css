@@ -176,8 +176,9 @@ body header .header_container .header_content .navigation nav ul li a {
   line-height: 25px;
   letter-spacing: 2px;
 }
-body header .header_container .header_content .cart a img {
-  width: 23px;
+body header .header_container .header_content .cart a .cartIcon {
+  width: 32px;
+  height: 32px;
 }
 body header .underline {
   max-width: 1110px;

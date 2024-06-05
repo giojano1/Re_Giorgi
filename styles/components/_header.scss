@@ -39,8 +39,9 @@ body {
         }
         .cart {
           a {
-            img {
-              width: 23px;
+            .cartIcon {
+              width: 32px;
+              height: 32px;
             }
           }
         }
