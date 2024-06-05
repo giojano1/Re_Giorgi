@@ -143,10 +143,6 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-footer {
-  background-color: red;
-}
-
 body header {
   background-color: #0e0e0e;
 }
@@ -190,7 +186,11 @@ body header .underline {
   background-color: #979797;
   height: 1px;
 }
-body header .hero_container {
+
+body main .hero_container {
+  background-color: #0e0e0e;
+}
+body main .hero_container .hero_content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -198,45 +198,45 @@ body header .hero_container {
   width: 100%;
   margin: 0 auto;
 }
-body header .hero_container .hero_text {
+body main .hero_container .hero_content .hero_text {
   width: 45%;
   display: flex;
   flex-direction: column;
   margin-right: 40px;
 }
-body header .hero_container .hero_text .new_product h3 {
+body main .hero_container .hero_content .hero_text .new_product h3 {
   color: #ffffff;
   font-size: 14px;
   letter-spacing: 10px;
 }
-body header .hero_container .hero_text .product_name {
+body main .hero_container .hero_content .hero_text .product_name {
   margin: 24px 0px;
 }
-body header .hero_container .hero_text .product_name h1 {
+body main .hero_container .hero_content .hero_text .product_name h1 {
   font-size: 56px;
   color: #ffffff;
   letter-spacing: 2px;
   font-weight: bold;
 }
-body header .hero_container .hero_text .product_desc p {
+body main .hero_container .hero_content .hero_text .product_desc p {
   color: #ffffff;
   font-size: 15px;
   line-height: 25px;
   max-width: 350px;
 }
-body header .hero_container .hero_text .view_product {
+body main .hero_container .hero_content .hero_text .view_product {
   margin-top: 40px;
 }
-body header .hero_container .hero_text .view_product button {
+body main .hero_container .hero_content .hero_text .view_product button {
   font-size: 13px;
   color: #ffffff;
   border: none;
   padding: 15px 34px;
   background-color: #d87d4a;
 }
-body header .hero_container .hero_img {
+body main .hero_container .hero_content .hero_img {
   width: 60%;
 }
-body header .hero_container .hero_img img {
+body main .hero_container .hero_content .hero_img img {
   width: 100%;
 }/*# sourceMappingURL=global.css.map */
