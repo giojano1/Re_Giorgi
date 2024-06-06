@@ -143,9 +143,19 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-body header .header_container {
+body main .categories_container .categories_content .categories_box .cat_link, body header .header_container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+body main .ad_container .ad_content, body main .categories_container .categories_content, body main .hero_container .hero_content, body header .header_container .header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 body header {
@@ -155,15 +165,6 @@ body header .header_container {
   max-width: 1440px;
   height: 100px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-body header .header_container .header_content {
-  max-width: 1100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 body header .header_container .header_content .logo img {
   width: 140px;
@@ -180,10 +181,22 @@ body header .header_container .header_content .navigation nav ul li a {
   color: #ffffff;
   line-height: 25px;
   letter-spacing: 2px;
+  transition: 250ms;
+}
+body header .header_container .header_content .navigation nav ul li a:hover {
+  color: #d87d4a;
+  transition: 250ms;
 }
 body header .header_container .header_content .cart a .cartIcon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 20px;
+}
+body header .header_container .header_content .cart a .cartIcon path {
+  transition: 250ms;
+}
+body header .header_container .header_content .cart a:hover .cartIcon path {
+  fill: #d87d4a;
+  transition: 250ms;
 }
 body header .underline {
   max-width: 1110px;
@@ -195,14 +208,6 @@ body header .underline {
 
 body main .hero_container {
   background-color: #0e0e0e;
-}
-body main .hero_container .hero_content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
 }
 body main .hero_container .hero_content .hero_text {
   flex: 0.4;
@@ -239,10 +244,89 @@ body main .hero_container .hero_content .hero_text .view_product button {
   border: none;
   padding: 15px 34px;
   background-color: #d87d4a;
+  transition: 250ms;
+}
+body main .hero_container .hero_content .hero_text .view_product button:hover {
+  background-color: #fbaf85;
+  transition: 250ms;
 }
 body main .hero_container .hero_content .hero_img {
   flex: 0.6;
 }
 body main .hero_container .hero_content .hero_img img {
   width: 100%;
+}
+body main .categories_container {
+  max-width: 1440px;
+  margin: 150px auto 100px auto;
+}
+body main .categories_container .categories_content .categories_box {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #f1f1f1;
+  position: relative;
+  height: 205px;
+  padding: 30px;
+  border-radius: 8px;
+}
+body main .categories_container .categories_content .categories_box .cat_img {
+  position: absolute;
+  bottom: 60%;
+}
+body main .categories_container .categories_content .categories_box .cat_img img {
+  width: 125px;
+}
+body main .categories_container .categories_content .categories_box .cat_title p {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+body main .categories_container .categories_content .categories_box .cat_link {
+  margin-top: 15px;
+  font-weight: 600;
+}
+body main .categories_container .categories_content .categories_box .cat_link a {
+  color: #000000;
+  margin-right: 10px;
+  transition: 250ms;
+}
+body main .categories_container .categories_content .categories_box .cat_link a:hover {
+  color: #d87d4a;
+  transition: 250ms;
+}
+body main .ad_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+body main .ad_container .ad_content .ad_text {
+  flex: 0.4;
+}
+body main .ad_container .ad_content .ad_text .title h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 44px;
+  color: #000000;
+}
+body main .ad_container .ad_content .ad_text .title h2 span {
+  color: #d87d4a;
+}
+body main .ad_container .ad_content .ad_text .desc {
+  margin-top: 30px;
+}
+body main .ad_container .ad_content .ad_text .desc p {
+  color: #000000;
+  font-size: 15px;
+  line-height: 25px;
+}
+body main .ad_container .ad_content .ad_img {
+  flex: 0.5;
+}
+body main .ad_container .ad_content .ad_img img {
+  width: 100%;
+  display: flex;
 }/*# sourceMappingURL=global.css.map */

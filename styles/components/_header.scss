@@ -1,19 +1,13 @@
 body {
   header {
-    background-color: #0e0e0e;
+    background-color: $bck-black;
     .header_container {
       @extend %flex;
       max-width: 1440px;
       height: 100px;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
       .header_content {
-        max-width: 1100px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @extend %containerWidth;
         .logo {
           img {
             width: 140px;
@@ -33,6 +27,11 @@ body {
                   color: $main-white;
                   line-height: 25px;
                   letter-spacing: 2px;
+                  transition: 250ms;
+                  &:hover {
+                    color: $main-orange;
+                    transition: 250ms;
+                  }
                 }
               }
             }
@@ -41,8 +40,19 @@ body {
         .cart {
           a {
             .cartIcon {
-              width: 32px;
-              height: 32px;
+              width: 24px;
+              height: 20px;
+              path {
+                transition: 250ms;
+              }
+            }
+            &:hover {
+              .cartIcon {
+                path {
+                  fill: $main-orange;
+                  transition: 250ms;
+                }
+              }
             }
           }
         }
