@@ -134,6 +134,10 @@ q:after {
   content: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Global reset end */
 @font-face {
   font-family: "Noto Sans Georgian";
