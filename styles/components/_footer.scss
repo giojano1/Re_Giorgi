@@ -1,0 +1,93 @@
+body {
+  footer {
+    background-color: $second-black;
+    margin-top: 50px;
+    .footer_content {
+      @include container(1100px);
+      flex-direction: column;
+      padding: 70px 0px 40px;
+      position: relative;
+      .overline {
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        background-color: $main-orange;
+        top: 0;
+      }
+      .navigation {
+        @include flex(space-between, center);
+        .logo {
+          img {
+            width: 140px;
+          }
+        }
+        nav {
+          ul {
+            display: flex;
+            align-items: center;
+            *:not(:last-child) {
+              margin-right: 50px;
+            }
+            li {
+              a {
+                font-size: 13px;
+                color: $main-white;
+                line-height: 25px;
+                letter-spacing: 2px;
+                transition: 250ms;
+                &:hover {
+                  color: $main-orange;
+                  transition: 250ms;
+                }
+              }
+            }
+          }
+        }
+      }
+      .website_description {
+        @include flex(space-between, end);
+        margin-top: 35px;
+        .desc {
+          p {
+            font-size: 15px;
+            color: $main-white;
+            opacity: 0.5;
+            line-height: 25px;
+            max-width: 540px;
+          }
+        }
+        .social_media {
+          @include flex(space-between, center);
+          .box {
+            svg {
+              width: 24px;
+              height: 24px;
+              path {
+                transition: 250ms;
+              }
+            }
+            &:hover {
+              svg {
+                path {
+                  fill: $main-orange;
+                  transition: 250ms;
+                }
+              }
+            }
+            &:not(:last-child) {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+      .copy_right {
+        margin-top: 50px;
+        p {
+          font-size: 15px;
+          color: $main-white;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

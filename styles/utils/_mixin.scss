@@ -1,0 +1,10 @@
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin container($width) {
+  max-width: $width;
+  width: 100%;
+  margin: 0 auto;
+}

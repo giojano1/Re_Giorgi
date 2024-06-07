@@ -3,7 +3,8 @@ body {
     .hero_container {
       background-color: $bck-black;
       .hero_content {
-        @extend %containerWidth;
+        @include flex(space-between, center);
+        @include container(1100px);
         .hero_text {
           flex: 0.4;
           display: flex;
@@ -61,7 +62,8 @@ body {
       max-width: 1440px;
       margin: 150px auto 100px auto;
       .categories_content {
-        @extend %containerWidth;
+        @include flex(space-between, center);
+        @include container(1100px);
         .categories_box {
           flex: 0.3;
           display: flex;
@@ -88,15 +90,20 @@ body {
             }
           }
           .cat_link {
-            @extend %flex;
+            @include flex(space-between, center);
             margin-top: 15px;
             font-weight: 600;
+            cursor: pointer;
             a {
               color: $main-black;
               margin-right: 10px;
               transition: 250ms;
-              &:hover {
+              opacity: 0.5;
+            }
+            &:hover {
+              a {
                 color: $main-orange;
+                opacity: 1;
                 transition: 250ms;
               }
             }
@@ -108,7 +115,8 @@ body {
       max-width: 1440px;
       margin: 0 auto;
       .ad_content {
-        @extend %containerWidth;
+        @include flex(space-between, center);
+        @include container(1100px);
         .ad_text {
           flex: 0.4;
           .title {
