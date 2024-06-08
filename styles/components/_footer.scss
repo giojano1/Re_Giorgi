@@ -4,6 +4,12 @@ body {
     margin-top: 50px;
     .footer_content {
       @include container(1100px);
+      @include responsive(l-tablet) {
+        padding: 0px 40px;
+      }
+      @include responsive(phone) {
+        padding: 0px 20px;
+      }
       flex-direction: column;
       padding: 70px 0px 40px;
       position: relative;
@@ -45,7 +51,7 @@ body {
         }
       }
       .website_description {
-        @include flex(space-between, end);
+        @include flex(space-between, flex-end);
         margin-top: 35px;
         .desc {
           p {
