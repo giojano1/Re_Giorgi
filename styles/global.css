@@ -669,6 +669,9 @@ body footer .footer_content .website_description .social_media {
     display: none;
   }
 }
+body footer .footer_content .website_description .social_media .box {
+  cursor: pointer;
+}
 body footer .footer_content .website_description .social_media .box svg {
   width: 24px;
   height: 24px;
@@ -713,6 +716,9 @@ body footer .footer_content .copy_right .social_media {
   body footer .footer_content .copy_right .social_media {
     margin-top: 40px;
   }
+}
+body footer .footer_content .copy_right .social_media .box {
+  cursor: pointer;
 }
 body footer .footer_content .copy_right .social_media .box svg {
   width: 24px;
