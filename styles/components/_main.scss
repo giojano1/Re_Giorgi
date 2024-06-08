@@ -183,8 +183,16 @@ body {
       .ad_content {
         @include flex(space-between, center);
         @include container(1100px);
+        @include responsive(tablet) {
+          flex-direction: column;
+        }
         .ad_text {
           flex: 0.4;
+          @include responsive(tablet) {
+            flex: 1;
+            text-align: center;
+            margin-top: 50px;
+          }
           .title {
             h2 {
               font-size: 40px;
@@ -196,6 +204,10 @@ body {
               span {
                 color: $main-orange;
               }
+              @include responsive(phone) {
+                font-size: 28px;
+                line-height: 30px;
+              }
             }
           }
           .desc {
@@ -204,11 +216,16 @@ body {
               color: $main-black;
               font-size: 15px;
               line-height: 25px;
+              opacity: 0.5;
             }
           }
         }
         .ad_img {
           flex: 0.5;
+          @include responsive(tablet) {
+            order: -1;
+            flex: 1;
+          }
           img {
             width: 100%;
             display: flex;

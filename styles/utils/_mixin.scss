@@ -8,6 +8,11 @@
   width: 100%;
   margin: 0 auto;
 }
+@mixin customCont($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
 $l-pc: 1420px; // large PC screen size
 $pc: 1260px; // PC screen size.
 $l-tablet: 1100px; // tablet screen size

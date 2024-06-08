@@ -4,35 +4,61 @@ body {
     margin-top: 50px;
     .footer_content {
       @include container(1100px);
+      padding: 70px 0px 40px 0px;
+      flex-direction: column;
+      position: relative;
       @include responsive(l-tablet) {
-        padding: 0px 40px;
+        padding: 70px 40px 40px;
+      }
+      @include responsive(s-tablet) {
       }
       @include responsive(phone) {
-        padding: 0px 20px;
+        padding: 70px 20px 40px;
       }
-      flex-direction: column;
-      padding: 70px 0px 40px;
-      position: relative;
+
       .overline {
         position: absolute;
         width: 100px;
         height: 4px;
         background-color: $main-orange;
         top: 0;
+        @include responsive(phone) {
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
       .navigation {
         @include flex(space-between, center);
+        @include responsive(m-tablet) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        @include responsive(s-tablet) {
+          align-items: center;
+        }
         .logo {
           img {
             width: 140px;
           }
         }
         nav {
+          @include responsive(m-tablet) {
+            margin-top: 32px;
+          }
           ul {
             display: flex;
             align-items: center;
             *:not(:last-child) {
-              margin-right: 50px;
+              margin-right: 34px;
+            }
+            @include responsive(phone) {
+              flex-direction: column;
+              *:not(:last-child) {
+                margin-right: 0px;
+                margin-bottom: 16px;
+              }
             }
             li {
               a {
@@ -41,6 +67,7 @@ body {
                 line-height: 25px;
                 letter-spacing: 2px;
                 transition: 250ms;
+
                 &:hover {
                   color: $main-orange;
                   transition: 250ms;
@@ -60,10 +87,19 @@ body {
             opacity: 0.5;
             line-height: 25px;
             max-width: 540px;
+            @include responsive(m-tablet) {
+              max-width: fit-content;
+            }
+            @include responsive(phone) {
+              text-align: center;
+            }
           }
         }
         .social_media {
-          @include flex(space-between, center);
+          @include flex(center, center);
+          @include responsive(m-tablet) {
+            display: none;
+          }
           .box {
             svg {
               width: 24px;
@@ -88,10 +124,47 @@ body {
       }
       .copy_right {
         margin-top: 50px;
-        p {
-          font-size: 15px;
-          color: $main-white;
-          opacity: 0.5;
+        @include flex(space-between, center);
+
+        @include responsive(phone) {
+          flex-direction: column;
+        }
+        .text {
+          p {
+            font-size: 15px;
+            color: $main-white;
+            opacity: 0.5;
+          }
+        }
+        .social_media {
+          @include customCont(none, center, center);
+          @include responsive(m-tablet) {
+            display: flex;
+          }
+
+          @include responsive(phone) {
+            margin-top: 40px;
+          }
+          .box {
+            svg {
+              width: 24px;
+              height: 24px;
+              path {
+                transition: 250ms;
+              }
+            }
+            &:hover {
+              svg {
+                path {
+                  fill: $main-orange;
+                  transition: 250ms;
+                }
+              }
+            }
+            &:not(:last-child) {
+              margin-right: 15px;
+            }
+          }
         }
       }
     }
