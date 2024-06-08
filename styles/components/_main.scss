@@ -105,12 +105,14 @@ body {
     }
     .categories_container {
       max-width: 1440px;
-      margin: 150px auto 100px auto;
+      margin: 150px auto 100px;
+      @include responsive(s-tablet) {
+        margin: 100px auto 50px !important;
+      }
       .categories_content {
         @include flex(space-between, center);
         @include container(1100px);
         flex-wrap: wrap;
-
         .categories_box {
           width: 30%;
           display: flex;

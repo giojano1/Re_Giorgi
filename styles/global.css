@@ -397,7 +397,12 @@ body main .hero_container .hero_content .hero_img img {
 }
 body main .categories_container {
   max-width: 1440px;
-  margin: 150px auto 100px auto;
+  margin: 150px auto 100px;
+}
+@media only screen and (max-width: 600px) {
+  body main .categories_container {
+    margin: 100px auto 50px !important;
+  }
 }
 body main .categories_container .categories_content {
   display: flex;
