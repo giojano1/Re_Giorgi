@@ -10,6 +10,9 @@ body {
     }
     .hero_container {
       background-color: $bck-black;
+      @include responsive(tablet) {
+        padding: 0px;
+      }
       .hero_content {
         @include flex(space-between, center);
         @include container(1100px);
@@ -17,6 +20,7 @@ body {
 
         @include responsive(tablet) {
           position: relative;
+          overflow-x: hidden;
           @include flex(center, center);
         }
         .hero_text {
@@ -33,6 +37,7 @@ body {
             flex: 1;
             margin-right: 0px;
             z-index: 2;
+            padding: 0px 20px;
           }
           .new_product {
             span {
@@ -92,11 +97,14 @@ body {
         .hero_img {
           flex: 0.5;
           padding: 40px;
+
           @include responsive(tablet) {
             opacity: 0.5;
             flex: 1;
             padding: 0px;
+            min-width: 370px;
           }
+
           img {
             width: 100%;
           }
@@ -231,6 +239,84 @@ body {
           img {
             width: 100%;
             display: flex;
+          }
+        }
+      }
+    }
+    .feedback_container {
+      max-width: 1440px;
+      margin: 0 auto;
+      .feedback_content {
+        @include container(1100px);
+        margin-top: 120px;
+        .title {
+          @include flex(space-between, center);
+          width: 100%;
+          h2 {
+            font-weight: bold;
+            color: $main-black;
+            font-size: 48px;
+          }
+          .swiper_nav {
+            border: 1px solid black;
+            @include flex(center, center);
+            .button-prev {
+              margin-right: 16px;
+              .prev-btn {
+                width: 16px;
+                cursor: pointer;
+              }
+            }
+            .button-next {
+              .next-btn {
+                width: 16px;
+                cursor: pointer;
+                border: 1px solid black;
+              }
+            }
+          }
+        }
+
+        .feedback_swiper {
+          width: 100%;
+          .feedback_wrapper {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 70px;
+          }
+          .feedback_box {
+            @include flex(space-between, flex-start);
+            flex-direction: column;
+            border: 1px solid $black-border;
+            border-radius: 20px;
+            padding: 28px 32px;
+            .rate {
+              img {
+                width: 22px;
+                height: 22px;
+              }
+            }
+            .user {
+              @include flex(center, center);
+              padding: 18px 0px;
+              span {
+                font-size: 20px;
+                color: $main-black;
+                font-weight: bold;
+              }
+              img {
+                width: 22px;
+                height: 22px;
+                margin-left: 5px;
+              }
+            }
+            .feedback_text {
+              p {
+                font-size: 16px;
+                color: $main-black;
+                opacity: 0.6;
+              }
+            }
           }
         }
       }

@@ -288,6 +288,11 @@ body header .underline {
 body main .hero_container {
   background-color: #0e0e0e;
 }
+@media only screen and (max-width: 850px) {
+  body main .hero_container {
+    padding: 0px;
+  }
+}
 body main .hero_container .hero_content {
   display: flex;
   justify-content: space-between;
@@ -300,6 +305,7 @@ body main .hero_container .hero_content {
 @media only screen and (max-width: 850px) {
   body main .hero_container .hero_content {
     position: relative;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,6 +327,7 @@ body main .hero_container .hero_content .hero_text {
     flex: 1;
     margin-right: 0px;
     z-index: 2;
+    padding: 0px 20px;
   }
 }
 body main .hero_container .hero_content .hero_text .new_product span {
@@ -390,6 +397,7 @@ body main .hero_container .hero_content .hero_img {
     opacity: 0.5;
     flex: 1;
     padding: 0px;
+    min-width: 370px;
   }
 }
 body main .hero_container .hero_content .hero_img img {
@@ -550,6 +558,87 @@ body main .ad_container .ad_content .ad_img {
 body main .ad_container .ad_content .ad_img img {
   width: 100%;
   display: flex;
+}
+body main .feedback_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+body main .feedback_container .feedback_content {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+body main .feedback_container .feedback_content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body main .feedback_container .feedback_content .title h2 {
+  font-weight: bold;
+  color: #000000;
+  font-size: 48px;
+}
+body main .feedback_container .feedback_content .title .swiper_nav {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .feedback_container .feedback_content .title .swiper_nav .button-prev {
+  margin-right: 16px;
+}
+body main .feedback_container .feedback_content .title .swiper_nav .button-prev .prev-btn {
+  width: 16px;
+  cursor: pointer;
+}
+body main .feedback_container .feedback_content .title .swiper_nav .button-next .next-btn {
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+body main .feedback_container .feedback_content .feedback_swiper {
+  width: 100%;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.1176470588);
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_box .rate img {
+  width: 22px;
+  height: 22px;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_box .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0px;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_box .user span {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_box .user img {
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_box .feedback_text p {
+  font-size: 16px;
+  color: #000000;
+  opacity: 0.6;
 }
 
 body footer {
