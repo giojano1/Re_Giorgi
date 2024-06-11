@@ -251,15 +251,34 @@ body {
         margin-top: 120px;
         .title {
           @include flex(space-between, center);
+          @include responsive(tablet-2) {
+            @include flex(center, center);
+            flex-direction: column;
+          }
           width: 100%;
           h2 {
             font-weight: bold;
             color: $main-black;
             font-size: 48px;
+            @include responsive(tablet) {
+              font-size: 40px;
+              text-align: center;
+            }
+            @include responsive(s-tablet) {
+              font-size: 30px;
+            }
+            @include responsive(phone) {
+              font-size: 26px;
+            }
           }
           .swiper_nav {
-            border: 1px solid black;
             @include flex(center, center);
+            @include responsive(tablet-2) {
+              @include flex(space-between, center);
+              text-align: center;
+              margin-top: 35px;
+              width: 100%;
+            }
             .button-prev {
               margin-right: 16px;
               .prev-btn {
@@ -271,7 +290,6 @@ body {
               .next-btn {
                 width: 16px;
                 cursor: pointer;
-                border: 1px solid black;
               }
             }
           }
@@ -281,40 +299,63 @@ body {
           width: 100%;
           .feedback_wrapper {
             width: 100%;
+            align-items: stretch !important;
             margin: 0 auto;
             margin-top: 70px;
-          }
-          .feedback_box {
-            @include flex(space-between, flex-start);
-            flex-direction: column;
-            border: 1px solid $black-border;
-            border-radius: 20px;
-            padding: 28px 32px;
-            .rate {
-              img {
-                width: 22px;
-                height: 22px;
-              }
+            height: 250px;
+            @include responsive(tablet-2) {
+              margin-top: 20px;
             }
-            .user {
-              @include flex(center, center);
-              padding: 18px 0px;
-              span {
-                font-size: 20px;
-                color: $main-black;
-                font-weight: bold;
-              }
-              img {
-                width: 22px;
-                height: 22px;
-                margin-left: 5px;
-              }
+            @include responsive(phone) {
+              height: 200px;
             }
-            .feedback_text {
-              p {
-                font-size: 16px;
-                color: $main-black;
-                opacity: 0.6;
+            .feedback_box {
+              @include flex(auto, flex-start);
+              flex-direction: column;
+              border: 1px solid $black-border;
+              border-radius: 20px;
+              padding: 28px 32px;
+              height: 100%;
+              .rate {
+                img {
+                  width: 22px;
+                  height: 22px;
+                  @include responsive(tablet-2) {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+              .user {
+                @include flex(center, center);
+                padding: 18px 0px;
+                span {
+                  font-size: 20px;
+                  color: $main-black;
+                  font-weight: bold;
+                  @include responsive(tablet-2) {
+                    font-size: 18px;
+                  }
+                }
+                img {
+                  width: 22px;
+                  height: 22px;
+                  margin-left: 5px;
+                  @include responsive(tablet-2) {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+              .feedback_text {
+                p {
+                  font-size: 16px;
+                  color: $main-black;
+                  opacity: 0.6;
+                  @include responsive(tablet-2) {
+                    font-size: 14px;
+                  }
+                }
               }
             }
           }

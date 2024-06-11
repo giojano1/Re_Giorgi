@@ -13,20 +13,16 @@ const swiper = new Swiper(".feedback_swiper", {
     prevEl: ".button-prev",
   },
 
-  speed: 2000,
+  speed: 1000,
   effect: "slide",
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    700: {
+    600: {
       slidesPerView: 2,
+      spaceBetween: 20,
     },
-    1000: {
+    900: {
       slidesPerView: 3,
-    },
-    1300: {
-      slidesPerView: 4,
+      spaceBetween: 20,
     },
   },
 });

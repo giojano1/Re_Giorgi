@@ -575,16 +575,49 @@ body main .feedback_container .feedback_content .title {
   align-items: center;
   width: 100%;
 }
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 body main .feedback_container .feedback_content .title h2 {
   font-weight: bold;
   color: #000000;
   font-size: 48px;
 }
+@media only screen and (max-width: 850px) {
+  body main .feedback_container .feedback_content .title h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body main .feedback_container .feedback_content .title h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body main .feedback_container .feedback_content .title h2 {
+    font-size: 26px;
+  }
+}
 body main .feedback_container .feedback_content .title .swiper_nav {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .title .swiper_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 35px;
+    width: 100%;
+  }
 }
 body main .feedback_container .feedback_content .title .swiper_nav .button-prev {
   margin-right: 16px;
@@ -596,49 +629,83 @@ body main .feedback_container .feedback_content .title .swiper_nav .button-prev 
 body main .feedback_container .feedback_content .title .swiper_nav .button-next .next-btn {
   width: 16px;
   cursor: pointer;
-  border: 1px solid black;
 }
 body main .feedback_container .feedback_content .feedback_swiper {
   width: 100%;
 }
 body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper {
   width: 100%;
+  align-items: stretch !important;
   margin: 0 auto;
   margin-top: 70px;
+  height: 250px;
 }
-body main .feedback_container .feedback_content .feedback_swiper .feedback_box {
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper {
+    height: 200px;
+  }
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box {
   display: flex;
-  justify-content: space-between;
+  justify-content: auto;
   align-items: flex-start;
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.1176470588);
   border-radius: 20px;
   padding: 28px 32px;
+  height: 100%;
 }
-body main .feedback_container .feedback_content .feedback_swiper .feedback_box .rate img {
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .rate img {
   width: 22px;
   height: 22px;
 }
-body main .feedback_container .feedback_content .feedback_swiper .feedback_box .user {
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .rate img {
+    width: 20px;
+    height: 20px;
+  }
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .user {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 18px 0px;
 }
-body main .feedback_container .feedback_content .feedback_swiper .feedback_box .user span {
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .user span {
   font-size: 20px;
   color: #000000;
   font-weight: bold;
 }
-body main .feedback_container .feedback_content .feedback_swiper .feedback_box .user img {
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .user span {
+    font-size: 18px;
+  }
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .user img {
   width: 22px;
   height: 22px;
   margin-left: 5px;
 }
-body main .feedback_container .feedback_content .feedback_swiper .feedback_box .feedback_text p {
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .user img {
+    width: 20px;
+    height: 20px;
+  }
+}
+body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .feedback_text p {
   font-size: 16px;
   color: #000000;
   opacity: 0.6;
+}
+@media only screen and (max-width: 700px) {
+  body main .feedback_container .feedback_content .feedback_swiper .feedback_wrapper .feedback_box .feedback_text p {
+    font-size: 14px;
+  }
 }
 
 body footer {
