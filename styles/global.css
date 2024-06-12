@@ -138,6 +138,10 @@ button {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global reset end */
 @font-face {
   font-family: "Noto Sans Georgian";
@@ -405,11 +409,15 @@ body main .hero_container .hero_content .hero_img img {
 }
 body main .categories_container {
   max-width: 1440px;
-  margin: 150px auto 100px;
+  margin: 0px auto;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 600px) {
   body main .categories_container {
-    margin: 100px auto 50px !important;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
 }
 body main .categories_container .categories_content {

@@ -113,9 +113,13 @@ body {
     }
     .categories_container {
       max-width: 1440px;
-      margin: 150px auto 100px;
+      margin: 0px auto;
+      padding-top: 150px;
+      padding-bottom: 100px;
       @include responsive(s-tablet) {
-        margin: 100px auto 50px !important;
+        margin: 0 auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
       }
       .categories_content {
         @include flex(space-between, center);

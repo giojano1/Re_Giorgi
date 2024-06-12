@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -29,7 +30,7 @@
             <nav>
               <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#productLink">PRODUCTS</a></li>
                 <li><a href="#">FEEDBACK</a></li>
                 <li><a href="#">SALES</a></li>
               </ul>
@@ -83,7 +84,7 @@
           </div>
         </div>
       </section>
-      <section class="categories_container">
+      <section id="productLink" class="categories_container" data-aos="fade-up" data-aos-duration="1000">
         <div class="categories_content">
           <div class="categories_box">
             <div class="cat_img">
@@ -123,7 +124,7 @@
           </div>
         </div>
       </section>
-      <section class="ad_container">
+      <section class="ad_container" data-aos="fade-up" data-aos-duration="1000">
         <div class="ad_content">
           <div class="ad_text">
             <div class="title">
@@ -146,7 +147,7 @@
           </div>
         </div>
       </section>
-      <section class="feedback_container">
+      <section class="feedback_container" data-aos="fade-up" data-aos-duration="1000">
         <div class="feedback_content">
           <div class="title">
             <h2>OUR HAPPY CUSTOMERS</h2>
@@ -456,8 +457,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script src="js/main.js"></script>
   </body>
 </html>
