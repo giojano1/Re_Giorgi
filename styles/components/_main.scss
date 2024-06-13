@@ -121,6 +121,9 @@ body {
         padding-top: 100px;
         padding-bottom: 50px;
       }
+      &:target {
+        scroll-margin-top: 50vh;
+      }
       .categories_content {
         @include flex(space-between, center);
         @include container(1100px);
@@ -250,9 +253,15 @@ body {
     .feedback_container {
       max-width: 1440px;
       margin: 0 auto;
+      &:target {
+        scroll-margin-top: 50vh;
+      }
       .feedback_content {
         @include container(1100px);
         margin-top: 120px;
+        @include responsive(tablet-2) {
+          margin-top: 80px;
+        }
         .title {
           @include flex(space-between, center);
           @include responsive(tablet-2) {
@@ -360,6 +369,75 @@ body {
                     font-size: 14px;
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    .countdown_container {
+      max-width: 1440px;
+      margin: 0 auto;
+      &:target {
+        scroll-margin-top: 50vh;
+      }
+      .countdown_content {
+        @include container(1100px);
+        margin-top: 120px;
+        @include responsive(tablet-2) {
+          margin-top: 80px;
+        }
+        .title {
+          h2 {
+            font-size: 48px;
+            font-weight: bold;
+            @include responsive(tablet-2) {
+              font-size: 40px;
+            }
+            @include responsive(phone) {
+              font-size: 35px;
+            }
+          }
+        }
+        .countdown_row {
+          @include flex(space-between, center);
+          flex-wrap: wrap;
+          margin-top: 30px;
+          .countdown_box {
+            @include flex(center, center);
+            @include responsive(tablet) {
+              height: 160px;
+            }
+            @include responsive(tablet-2) {
+              width: 48%;
+              margin-top: 10px;
+            }
+            @include responsive(phone) {
+              width: 100%;
+              margin-top: 0 px;
+            }
+            flex-direction: column;
+            background-color: $second-black;
+            width: 23%;
+            border-radius: 22px;
+            height: 200px;
+            margin-top: 20px;
+            span {
+              font-size: 64px;
+              color: $main-white;
+              font-weight: bold;
+              @include responsive(tablet) {
+                font-size: 55px;
+              }
+              @include responsive(phone) {
+              }
+            }
+            p {
+              font-size: 16px;
+              color: $main-white;
+              padding-top: 5px;
+              @include responsive(tablet) {
+                font-size: 15px;
               }
             }
           }
