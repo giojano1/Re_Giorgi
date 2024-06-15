@@ -81,6 +81,9 @@ body {
                 margin-right: 50px;
               }
               li {
+                .inuse {
+                  color: $main-orange;
+                }
                 a {
                   font-size: 13px;
                   color: $main-white;

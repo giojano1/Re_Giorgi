@@ -1,15 +1,165 @@
 body {
   main {
+    section {
+      @include responsive(l-tablet) {
+        padding: 0px 40px;
+      }
+      @include responsive(phone) {
+        padding: 0px 20px;
+      }
+    }
     .title_container {
       background-color: $bck-black;
       .title_content {
         @include flex(center, center);
         @include container(1100px);
         padding: 95px 0px;
+        @include responsive(tablet-2) {
+          padding: 80px 0px;
+        }
+        @include responsive(phone) {
+          padding: 33px 0px;
+        }
         h2 {
           color: $main-white;
           font-size: 40px;
           letter-spacing: 1.4px;
+          @include responsive(phone) {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+    .product_container {
+      max-width: 1440px;
+      margin: 150px auto;
+      @include responsive(tablet-2) {
+        margin: 120px auto;
+      }
+      @include responsive(phone) {
+        margin: 65px auto;
+      }
+      .product_content {
+        @include container(1100px);
+        .product_list {
+          .product_box {
+            @include flex(space-between, center);
+            @include responsive(tablet-2) {
+              flex-direction: column;
+              text-align: center;
+              &:last-child {
+                flex-direction: column !important;
+              }
+            }
+            &:not(:last-child) {
+              margin-bottom: 150px;
+            }
+            &:last-child {
+              flex-direction: row-reverse;
+            }
+            .product_img {
+              flex: 0.45;
+              @include responsive(tablet-2) {
+                flex: 1;
+              }
+              @include flex(center, center);
+              background-color: $main-gray;
+              border-radius: 8px;
+              padding: 50px 30px;
+              width: 100%;
+              img {
+                width: 80%;
+                @include responsive(tablet-2) {
+                  max-width: 220px;
+                  width: 100%;
+                }
+              }
+            }
+            .product_text {
+              flex: 0.4;
+              @include responsive(tablet) {
+                flex: 0.5;
+              }
+              @include responsive(tablet-2) {
+                flex: 1;
+                margin-top: 50px;
+              }
+              .product_title {
+                font-size: 40px;
+                color: $main-black;
+                text-transform: uppercase;
+                font-weight: bold;
+                @include responsive(phone) {
+                  font-size: 28px;
+                }
+              }
+              .product_description {
+                font-size: 15px;
+                color: $main-black;
+                opacity: 0.5;
+                line-height: 25px;
+                margin: 33px 0px;
+                @include responsive(phone) {
+                  margin: 22px 0px;
+                }
+              }
+              .view_more {
+                font-size: 13px;
+                color: $main-white;
+                border: none;
+                padding: 15px 34px;
+                background-color: $main-orange;
+                transition: 250ms;
+                &:hover {
+                  background-color: $second-orange;
+                  transition: 250ms;
+                }
+              }
+            }
+          }
+        }
+        .pagination {
+          width: 100%;
+          @include flex(center, center);
+          margin-top: 100px;
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $main-black;
+            border-radius: 4px;
+            width: 32px;
+            height: 32px;
+            background-color: transparent;
+            transition: 300ms;
+            &:hover {
+              border-color: $main-orange;
+              transition: 300ms;
+              svg {
+                path {
+                  fill: $main-orange;
+                  transition: 300ms;
+                }
+              }
+            }
+            &:disabled {
+              border-color: $main-gray;
+              svg {
+                path {
+                  fill: $main-gray;
+                }
+              }
+            }
+            svg {
+              display: flex;
+              path {
+                transition: 300ms;
+              }
+            }
+          }
+          #prevButton {
+            margin-right: 50px;
+          }
         }
       }
     }
