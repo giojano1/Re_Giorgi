@@ -1000,4 +1000,22 @@ body footer .footer_content .copy_right .social_media .box:hover svg path {
 }
 body footer .footer_content .copy_right .social_media .box:not(:last-child) {
   margin-right: 15px;
+}
+
+body main .title_container {
+  background-color: #0e0e0e;
+}
+body main .title_container .title_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 95px 0px;
+}
+body main .title_container .title_content h2 {
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 1.4px;
 }/*# sourceMappingURL=global.css.map */

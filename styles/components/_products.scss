@@ -1,0 +1,17 @@
+body {
+  main {
+    .title_container {
+      background-color: $bck-black;
+      .title_content {
+        @include flex(center, center);
+        @include container(1100px);
+        padding: 95px 0px;
+        h2 {
+          color: $main-white;
+          font-size: 40px;
+          letter-spacing: 1.4px;
+        }
+      }
+    }
+  }
+}
