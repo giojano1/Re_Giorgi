@@ -51,8 +51,14 @@ function genProductBox() {
     const productButton = document.createElement("button");
     productButton.classList.add("view_more");
     productButton.textContent = "SEE PRODUCT";
+    productButton.addEventListener("click", () => {
+      redirect(product.id);
+    });
     textDiv.appendChild(productButton);
   });
+}
+function redirect(productID) {
+  window.location.href = `../pages/product.html?id=${productID}`;
 }
 if (currentPage === 1) {
   prevButton.disabled = true;
