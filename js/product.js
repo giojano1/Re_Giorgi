@@ -7,9 +7,7 @@ const productType = document.querySelector(".product_type");
 const productDesc = document.querySelector(".product_description");
 const productPrice = document.querySelector(".product_price");
 const productFeature = document.querySelector("#productDesc");
-const productImg1 = document.querySelector(".gall1");
-const productImg2 = document.querySelector(".gall2");
-const productImg3 = document.querySelector(".gall3");
+const productImgs = document.querySelectorAll(".gall");
 const qty = document.getElementById("qty");
 const minusBtn = document.getElementById("minus");
 const plusBtn = document.getElementById("plus");
@@ -25,9 +23,9 @@ fetch("../products.json")
       productDesc.textContent = productData.description;
       productPrice.textContent = `$ ${productData.price}`;
       productFeature.textContent = productData.features;
-      productImg1.src = productData.additionalImages[0];
-      productImg2.src = productData.additionalImages[1];
-      productImg3.src = productData.additionalImages[2];
+      productImgs.forEach((img, i) => {
+        img.src = productData.additionalImages[i];
+      });
     } else {
       alert("404 not found");
     }
