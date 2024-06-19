@@ -4,7 +4,7 @@ const nextButton = document.getElementById("nextButton");
 let currentPage = 1;
 const limit = 2;
 let products = [];
-fetch("../data.json")
+fetch("../products.json")
   .then((res) => res.json())
   .then((data) => {
     products = data;
