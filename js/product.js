@@ -15,8 +15,9 @@ let productQty = parseInt(qty.textContent);
 fetch("../products.json")
   .then((res) => res.json())
   .then((product) => {
-    const productData = product[productId - 1];
-    if (product) {
+    const productData = product.find((item) => item.id === productId);
+
+    if (productData) {
       productMainImg.src = productData.img;
       productTitle.textContent = productData.name;
       productType.textContent = productData.type;
