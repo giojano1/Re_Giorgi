@@ -57,9 +57,7 @@ function genProductBox() {
     textDiv.appendChild(productButton);
   });
 }
-function redirect(productID) {
-  window.location.href = `../pages/product.html?id=${productID}`;
-}
+
 if (currentPage === 1) {
   prevButton.disabled = true;
 }
@@ -68,6 +66,9 @@ prevButton.addEventListener("click", () => {
     currentPage--;
     nextButton.disabled = false;
     genProductBox();
+    window.scrollTo({
+      top: 0,
+    });
   } else {
     prevButton.disabled = true;
   }
@@ -75,14 +76,21 @@ prevButton.addEventListener("click", () => {
     prevButton.disabled = true;
   }
 });
+
 nextButton.addEventListener("click", () => {
   if (currentPage < Math.ceil(products.length / limit)) {
     prevButton.disabled = false;
     currentPage++;
     genProductBox();
+    window.scrollTo({
+      top: 0,
+    });
   } else {
   }
   if (currentPage === Math.ceil(products.length / limit)) {
     nextButton.disabled = true;
   }
 });
+function redirect(productID) {
+  window.location.href = `../pages/product.html?id=${productID}`;
+}
