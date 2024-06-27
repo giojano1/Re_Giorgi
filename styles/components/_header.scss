@@ -4,6 +4,7 @@ body {
     .header_container {
       @include flex(space-between, center);
       @include container(1440px);
+
       @include responsive(l-tablet) {
         padding: 0px 40px;
       }
@@ -14,6 +15,7 @@ body {
       .header_content {
         @include flex(space-between, center);
         @include container(1100px);
+        position: relative;
         .left {
           @include flex(space-between, center);
           .logo {
@@ -118,14 +120,19 @@ body {
             }
           }
           .cart_popup {
+            display: none;
             position: absolute;
             background-color: $main-white;
             border-radius: 8px;
             right: 0;
-            top: 120px;
+            top: 80px;
             width: 370px;
-            z-index: 3;
+            z-index: 4;
             padding: 33px;
+            @include responsive(phone) {
+              padding: 15px;
+              width: 100%;
+            }
             .title {
               @include flex(space-between, center);
               h3 {
@@ -147,8 +154,12 @@ body {
               }
             }
             .cart_content {
+              margin-top: 30px;
               .cart_item {
                 @include flex(space-between, center);
+                &:not(:last-child) {
+                  margin-bottom: 22px;
+                }
                 .product {
                   @include flex(auto, center);
                   .product_img {
@@ -201,6 +212,47 @@ body {
                 }
               }
             }
+            .cart_nav {
+              .total {
+                margin: 20px 0px;
+                @include flex(space-between, center);
+                p {
+                  font-size: 15px;
+                  opacity: 0.5;
+                  line-height: 25px;
+                }
+                span {
+                  font-size: 18px;
+                  font-weight: 600;
+                }
+              }
+              #checkout {
+                width: 100%;
+                text-align: center;
+                background-color: $main-orange;
+                color: $main-white;
+                font-size: 13px;
+                font-family: "Noto Sans Georgian", sans-serif;
+                padding: 15px 0px;
+                border: none;
+                transition: 250ms;
+                &:hover {
+                  background-color: $second-orange;
+                  transition: 250ms;
+                }
+              }
+            }
+          }
+          .overlay {
+            display: none;
+            background-color: $bck-black;
+            opacity: 0.5;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
         }
       }

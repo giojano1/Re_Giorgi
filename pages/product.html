@@ -32,7 +32,7 @@
             </nav>
           </div>
           <div class="cart">
-            <a href="#">
+            <a class="cart_btn" href="#">
               <svg
                 class="cartIcon"
                 width="24"
@@ -49,6 +49,37 @@
                 />
               </svg>
             </a>
+            <div class="cart_popup">
+              <div class="title">
+                <h3>CART <span>(1)</span></h3>
+                <button id="removeAllItems">Remove all</button>
+              </div>
+              <div class="cart_content">
+                <div class="cart_item">
+                  <div class="product">
+                    <div class="product_img">
+                      <img src="assets/webp/product1.webp" alt="product" />
+                    </div>
+                    <div class="product_details">
+                      <span class="product_title">XX99 MK II</span>
+                      <p class="product_price">$2999</p>
+                    </div>
+                  </div>
+                  <div class="product_nav">
+                    <span>1</span>
+                    <button>REMOVE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart_nav">
+                <div class="total">
+                  <p>TOTAL</p>
+                  <span id="totalAmount">$5000</span>
+                </div>
+                <button id="checkout">CHECKOUT</button>
+              </div>
+            </div>
+            <div class="overlay"></div>
           </div>
         </div>
       </div>
@@ -72,7 +103,7 @@
                <div class="add_toCart">
                 <div class="qty">
                     <button id="minus">-</button>
-                    <span id="qty">1</span>
+                    <input type="number" min="1" id="qty" value="1">
                     <button id="plus">+</button>
                 </div>
                 <button id="addToCart">ADD TO CART</button>
@@ -105,5 +136,6 @@
       </section>
     </main>
     <script src="../js/product.js"></script>
+    <script src="../js/cart.js"></script>
   </body>
 </html>
