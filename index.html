@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -54,6 +54,36 @@
                 />
               </svg>
             </a>
+            <div class="cart_popup">
+              <div class="title">
+                <h3>CART <span>(1)</span></h3>
+                <button id="removeAllItems">Remove all</button>
+              </div>
+              <div class="cart_content">
+                <div class="cart_item">
+                  <div class="product">
+                    <div class="product_img">
+                      <img src="assets/webp/product1.webp" alt="product" />
+                    </div>
+                    <div class="product_details">
+                      <span class="product_title">XX99 MK II</span>
+                      <p class="product_price">$2999</p>
+                    </div>
+                  </div>
+                  <div class="product_nav">
+                    <span>1</span>
+                    <button>REMOVE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart_nav">
+                <div class="total">
+                  <span>TOTAL</span>
+                  <span id="totalAmount">$5000</span>
+                </div>
+                <button id="checkout">CHECKOUT</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +114,12 @@
           </div>
         </div>
       </section>
-      <section id="productLink" class="categories_container" data-aos="fade-up" data-aos-duration="1000">
+      <section
+        id="productLink"
+        class="categories_container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div class="categories_content">
           <div class="categories_box">
             <div class="cat_img">
@@ -147,7 +182,12 @@
           </div>
         </div>
       </section>
-      <section id="feedbackLink" class="feedback_container" data-aos="fade-up" data-aos-duration="1000">
+      <section
+        id="feedbackLink"
+        class="feedback_container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div class="feedback_content">
           <div class="title">
             <h2>OUR HAPPY CUSTOMERS</h2>
@@ -172,161 +212,185 @@
             <div class="feedback_wrapper swiper-wrapper">
               <div class="swiper-slide feedback_box">
                 <div class="rate">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
                 </div>
                 <div class="user">
                   <span>Sarah M.</span>
-                  <img src="assets/svg/checked.svg" alt="checked">
+                  <img src="assets/svg/checked.svg" alt="checked" />
                 </div>
                 <div class="feedback_text">
-                  <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+                  <p>
+                    "I'm blown away by the quality and style of the clothes I
+                    received from Shop.co. From casual wear to elegant dresses,
+                    every piece I've bought has exceeded my expectations.”
+                  </p>
                 </div>
               </div>
               <div class="swiper-slide feedback_box">
                 <div class="rate">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
                 </div>
                 <div class="user">
                   <span>Alex K.</span>
-                  <img src="assets/svg/checked.svg" alt="checked">
+                  <img src="assets/svg/checked.svg" alt="checked" />
                 </div>
                 <div class="feedback_text">
-<p>"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly The stabled”</p>                </div>
+                  <p>
+                    "Finding clothes that align with my personal style used to
+                    be a challenge until I discovered Shop.co. The range of
+                    options they offer is truly The stabled”
+                  </p>
+                </div>
               </div>
               <div class="swiper-slide feedback_box">
                 <div class="rate">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
-                  <img src="assets/svg/star.svg" alt="star">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
                 </div>
                 <div class="user">
                   <span>James L.</span>
-                  <img src="assets/svg/checked.svg" alt="checked">
+                  <img src="assets/svg/checked.svg" alt="checked" />
                 </div>
                 <div class="feedback_text">
-                  <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-                    not .”</p>
-             </div>
-            
-            </div>
-            <div class="swiper-slide feedback_box">
-              <div class="rate">
-                <img src="assets/svg/star.svg" alt="star">
-                <img src="assets/svg/star.svg" alt="star">
-                <img src="assets/svg/star.svg" alt="star">
-                <img src="assets/svg/star.svg" alt="star">
-                <img src="assets/svg/star.svg" alt="star">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
               </div>
-              <div class="user">
-                <span>James L.</span>
-                <img src="assets/svg/checked.svg" alt="checked">
+              <div class="swiper-slide feedback_box">
+                <div class="rate">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                </div>
+                <div class="user">
+                  <span>James L.</span>
+                  <img src="assets/svg/checked.svg" alt="checked" />
+                </div>
+                <div class="feedback_text">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
               </div>
-              <div class="feedback_text">
-                <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-                  not .”</p>
-           </div>
-          
-          </div>
-          <div class="swiper-slide feedback_box">
-            <div class="rate">
-              <img src="assets/svg/star.svg" alt="star">
-              <img src="assets/svg/star.svg" alt="star">
-              <img src="assets/svg/star.svg" alt="star">
-              <img src="assets/svg/star.svg" alt="star">
-              <img src="assets/svg/star.svg" alt="star">
+              <div class="swiper-slide feedback_box">
+                <div class="rate">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                </div>
+                <div class="user">
+                  <span>James L.</span>
+                  <img src="assets/svg/checked.svg" alt="checked" />
+                </div>
+                <div class="feedback_text">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide feedback_box">
+                <div class="rate">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                </div>
+                <div class="user">
+                  <span>James L.</span>
+                  <img src="assets/svg/checked.svg" alt="checked" />
+                </div>
+                <div class="feedback_text">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide feedback_box">
+                <div class="rate">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                </div>
+                <div class="user">
+                  <span>James L.</span>
+                  <img src="assets/svg/checked.svg" alt="checked" />
+                </div>
+                <div class="feedback_text">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide feedback_box">
+                <div class="rate">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                </div>
+                <div class="user">
+                  <span>James L.</span>
+                  <img src="assets/svg/checked.svg" alt="checked" />
+                </div>
+                <div class="feedback_text">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide feedback_box">
+                <div class="rate">
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                  <img src="assets/svg/star.svg" alt="star" />
+                </div>
+                <div class="user">
+                  <span>James L.</span>
+                  <img src="assets/svg/checked.svg" alt="checked" />
+                </div>
+                <div class="feedback_text">
+                  <p>
+                    "As someone who's always on the lookout for unique fashion
+                    pieces, I'm thrilled to have stumbled upon Shop.co. The
+                    selection of clothes is not .”
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="user">
-              <span>James L.</span>
-              <img src="assets/svg/checked.svg" alt="checked">
-            </div>
-            <div class="feedback_text">
-              <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-                not .”</p>
-         </div>
-        
-        </div>
-        <div class="swiper-slide feedback_box">
-          <div class="rate">
-            <img src="assets/svg/star.svg" alt="star">
-            <img src="assets/svg/star.svg" alt="star">
-            <img src="assets/svg/star.svg" alt="star">
-            <img src="assets/svg/star.svg" alt="star">
-            <img src="assets/svg/star.svg" alt="star">
-          </div>
-          <div class="user">
-            <span>James L.</span>
-            <img src="assets/svg/checked.svg" alt="checked">
-          </div>
-          <div class="feedback_text">
-            <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-              not .”</p>
-       </div>
-      
-      </div>
-      <div class="swiper-slide feedback_box">
-        <div class="rate">
-          <img src="assets/svg/star.svg" alt="star">
-          <img src="assets/svg/star.svg" alt="star">
-          <img src="assets/svg/star.svg" alt="star">
-          <img src="assets/svg/star.svg" alt="star">
-          <img src="assets/svg/star.svg" alt="star">
-        </div>
-        <div class="user">
-          <span>James L.</span>
-          <img src="assets/svg/checked.svg" alt="checked">
-        </div>
-        <div class="feedback_text">
-          <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-            not .”</p>
-     </div>
-    
-    </div>
-    <div class="swiper-slide feedback_box">
-      <div class="rate">
-        <img src="assets/svg/star.svg" alt="star">
-        <img src="assets/svg/star.svg" alt="star">
-        <img src="assets/svg/star.svg" alt="star">
-        <img src="assets/svg/star.svg" alt="star">
-        <img src="assets/svg/star.svg" alt="star">
-      </div>
-      <div class="user">
-        <span>James L.</span>
-        <img src="assets/svg/checked.svg" alt="checked">
-      </div>
-      <div class="feedback_text">
-        <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-          not .”</p>
-   </div>
-  
-  </div>
-  <div class="swiper-slide feedback_box">
-    <div class="rate">
-      <img src="assets/svg/star.svg" alt="star">
-      <img src="assets/svg/star.svg" alt="star">
-      <img src="assets/svg/star.svg" alt="star">
-      <img src="assets/svg/star.svg" alt="star">
-      <img src="assets/svg/star.svg" alt="star">
-    </div>
-    <div class="user">
-      <span>James L.</span>
-      <img src="assets/svg/checked.svg" alt="checked">
-    </div>
-    <div class="feedback_text">
-      <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is 
-        not .”</p>
- </div>
-
-</div>
           </div>
         </div>
       </section>
@@ -336,21 +400,22 @@
             <h2>Big Summer Sale</h2>
           </div>
           <div class="countdown_row">
-          <div class="countdown_box">
-            <span id="countDay">25</span>
-            <p>DAYS</p>
-          </div>
-          <div class="countdown_box">
-            <span id="countHr">24</span>
-            <p>HOURS</p>
-          </div>
-          <div class="countdown_box">
-            <span id="countMin">0</span>
-            <p>MINUTES</p>
-          </div>
-          <div class="countdown_box">
-            <span id="countSec">0</span>
-            <p>SECONDS</p>
+            <div class="countdown_box">
+              <span id="countDay">25</span>
+              <p>DAYS</p>
+            </div>
+            <div class="countdown_box">
+              <span id="countHr">24</span>
+              <p>HOURS</p>
+            </div>
+            <div class="countdown_box">
+              <span id="countMin">0</span>
+              <p>MINUTES</p>
+            </div>
+            <div class="countdown_box">
+              <span id="countSec">0</span>
+              <p>SECONDS</p>
+            </div>
           </div>
         </div>
       </section>

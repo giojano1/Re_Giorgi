@@ -117,6 +117,91 @@ body {
               }
             }
           }
+          .cart_popup {
+            position: absolute;
+            background-color: $main-white;
+            border-radius: 8px;
+            right: 0;
+            top: 120px;
+            width: 370px;
+            z-index: 3;
+            padding: 33px;
+            .title {
+              @include flex(space-between, center);
+              h3 {
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 1px;
+              }
+              button {
+                background-color: transparent;
+                border: none;
+                font-size: 15px;
+                font-family: "Noto Sans Georgian", sans-serif;
+                transition: 250ms;
+                &:hover {
+                  color: $main-orange;
+                  text-decoration: underline;
+                  transition: 250ms;
+                }
+              }
+            }
+            .cart_content {
+              .cart_item {
+                @include flex(space-between, center);
+                .product {
+                  @include flex(auto, center);
+                  .product_img {
+                    background-color: $main-gray;
+                    padding: 10px;
+                    border-radius: 8px;
+                    img {
+                      width: 42px;
+                      height: 42px;
+                      object-fit: contain;
+                    }
+                  }
+                  .product_details {
+                    @include flex(auto, auto);
+                    flex-direction: column;
+                    margin-left: 16px;
+                    span {
+                      font-size: 15px;
+                      font-weight: 600;
+                      line-height: 25px;
+                    }
+                    p {
+                      font-size: 14px;
+                      opacity: 0.5;
+                      line-height: 25px;
+                    }
+                  }
+                }
+                .product_nav {
+                  @include flex(auto, center);
+
+                  span {
+                    font-size: 13px;
+                    font-weight: 600;
+                  }
+                  button {
+                    margin-left: 10px;
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    padding: 8px 4px;
+                    background-color: $main-gray;
+                    border: none;
+                    transition: 250ms;
+                    &:hover {
+                      color: $main-orange;
+                      transition: 250ms;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
