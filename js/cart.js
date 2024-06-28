@@ -4,6 +4,8 @@ const overlay = document.querySelector(".overlay");
 const decBtn = document.getElementById("minus");
 const incBtn = document.getElementById("plus");
 const addToCartBtn = document.getElementById("addToCart");
+const qty = document.getElementById("qty");
+qty.id = `quantity-${productId}`;
 // show hide cart
 cartBtn.addEventListener("click", () => {
   cartPopup.style.display = "block";
@@ -17,25 +19,24 @@ overlay.addEventListener("click", () => {
 
 // increment button
 incBtn.addEventListener("click", () => {
-  incrementQuantity(product.id);
+  incrementQuantity();
 });
 // decrement button
 decBtn.addEventListener("click", () => {
-  decrementQuantity(product.id);
+  decrementQuantity();
 });
-addToCartBtn.addEventListener("click", () => {
-  const quantity = parseInt(
-    document.querySelector(`#quantity-${product.id}`).value
-  );
-  addToCart({ ...product, quantity });
-});
-function incrementQuantity(myId) {
-  const quantityInput = document.querySelector(`#quantity-${myId}`);
-  quantityInput.value = parseInt(quantityInput.value) + 1;
+
+// addToCartBtn.addEventListener("click", () => {
+//   const quantity = parseInt(
+//     document.querySelector(`#quantity-${product.id}`).value
+//   );
+//   addToCart({ ...product, quantity });
+// });
+function incrementQuantity() {
+  qty.value++;
 }
 function decrementQuantity(myId) {
-  const quantityInput = document.querySelector(`#quantity-${myId}`);
-  if (parseInt(quantityInput.value) > 1) {
-    quantityInput.value = parseInt(quantityInput.value) - 1;
+  if (qty.value > 1) {
+    qty.value--;
   }
 }

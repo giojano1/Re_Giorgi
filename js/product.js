@@ -8,10 +8,7 @@ const productDesc = document.querySelector(".product_description");
 const productPrice = document.querySelector(".product_price");
 const productFeature = document.querySelector("#productDesc");
 const productImgs = document.querySelectorAll(".gall");
-const qty = document.getElementById("qty");
-const minusBtn = document.getElementById("minus");
-const plusBtn = document.getElementById("plus");
-let productQty = parseInt(qty.textContent);
+
 fetch("../products.json")
   .then((res) => res.json())
   .then((product) => {
@@ -31,13 +28,3 @@ fetch("../products.json")
       alert("404 not found");
     }
   });
-minusBtn.addEventListener("click", () => {
-  if (productQty > 1) {
-    productQty--;
-    qty.textContent = productQty;
-  }
-});
-plusBtn.addEventListener("click", () => {
-  productQty++;
-  qty.textContent = productQty;
-});
