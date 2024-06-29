@@ -1381,14 +1381,12 @@ body main .product_container .product_content {
 body main .product_container .product_content #goBack {
   font-size: 15px;
   color: #000000;
-  background-color: transparent;
-  border: none;
   opacity: 0.5;
   transition: 300ms;
-  font-family: "Noto Sans Georgian", sans-serif;
 }
 body main .product_container .product_content #goBack:hover {
   color: #d87d4a;
+  opacity: 1;
   transition: 300ms;
 }
 body main .product_container .product_content .product {
@@ -1446,7 +1444,7 @@ body main .product_container .product_content .product .product_text {
     margin-top: 50px;
   }
 }
-body main .product_container .product_content .product .product_text .product_title,
+body main .product_container .product_content .product .product_text .product_name,
 body main .product_container .product_content .product .product_text .product_type {
   font-size: 40px;
   color: #000000;
@@ -1454,7 +1452,7 @@ body main .product_container .product_content .product .product_text .product_ty
   font-weight: bold;
 }
 @media only screen and (max-width: 500px) {
-  body main .product_container .product_content .product .product_text .product_title,
+  body main .product_container .product_content .product .product_text .product_name,
   body main .product_container .product_content .product .product_text .product_type {
     font-size: 28px;
   }

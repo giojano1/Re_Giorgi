@@ -22,13 +22,11 @@ body {
         #goBack {
           font-size: 15px;
           color: $main-black;
-          background-color: transparent;
-          border: none;
           opacity: 0.5;
           transition: 300ms;
-          font-family: "Noto Sans Georgian", sans-serif;
           &:hover {
             color: $main-orange;
+            opacity: 1;
             transition: 300ms;
           }
         }
@@ -69,7 +67,7 @@ body {
               flex: 1;
               margin-top: 50px;
             }
-            .product_title,
+            .product_name,
             .product_type {
               font-size: 40px;
               color: $main-black;

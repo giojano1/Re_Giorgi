@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = parseInt(urlParams.get("id"));
 
 const productMainImg = document.querySelector(".productMainImg");
-const productTitle = document.querySelector(".product_title");
+const productTitle = document.querySelector(".product_name");
 const productType = document.querySelector(".product_type");
 const productDesc = document.querySelector(".product_description");
 const productPrice = document.querySelector(".product_price");
