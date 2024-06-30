@@ -1614,4 +1614,84 @@ body main .gallery_container .gallery_content .right img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 1100px) {
+  body main section {
+    padding: 0px 40px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body main section {
+    padding: 0px 20px;
+  }
+}
+body main .checkout_container {
+  max-width: 1440px;
+  margin: 60px auto;
+}
+body main .checkout_container .checkout_content {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+body main .checkout_container .checkout_content .checkout_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: auto;
+  margin: 30px 0px;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout {
+  background-color: #ffffff;
+  flex: 0.67;
+  padding: 45px;
+  border-radius: 8px;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout h2 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout .detail_container {
+  margin-top: 40px;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout .detail_container h3 {
+  font-size: 13px;
+  color: #d87d4a;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label {
+  width: 48%;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label span {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label input {
+  width: 100%;
+  margin-top: 8px;
+  background-color: transparent;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  height: 50px;
+  padding: 0px 24px;
+}
+body main .checkout_container .checkout_content .checkout_row .summary {
+  background-color: #ffffff;
+  flex: 0.3;
+  padding: 45px;
+  border-radius: 8px;
+}
+
+.gray {
+  background-color: #cfcfcf !important;
 }/*# sourceMappingURL=global.css.map */
