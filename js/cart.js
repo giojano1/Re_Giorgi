@@ -1,11 +1,7 @@
 const cartBtn = document.querySelector(".cart_btn");
 const cartPopup = document.querySelector(".cart_popup");
 const overlay = document.querySelector(".overlay");
-const decBtn = document.getElementById("minus");
-const incBtn = document.getElementById("plus");
-const addToCartBtn = document.getElementById("addToCart");
-const qty = document.getElementById("qty");
-qty.id = `quantity-${productId}`;
+
 // show hide cart
 cartBtn.addEventListener("click", () => {
   cartPopup.style.display = "block";
@@ -18,13 +14,13 @@ overlay.addEventListener("click", () => {
 });
 
 // increment button
-incBtn.addEventListener("click", () => {
-  incrementQuantity();
-});
+// incBtn.addEventListener("click", () => {
+//   incrementQuantity();
+// });
 // decrement button
-decBtn.addEventListener("click", () => {
-  decrementQuantity();
-});
+// decBtn.addEventListener("click", () => {
+//   decrementQuantity();
+// });
 
 // addToCartBtn.addEventListener("click", () => {
 //   const quantity = parseInt(
@@ -32,11 +28,11 @@ decBtn.addEventListener("click", () => {
 //   );
 //   addToCart({ ...product, quantity });
 // });
-function incrementQuantity() {
-  qty.value++;
-}
-function decrementQuantity(myId) {
-  if (qty.value > 1) {
-    qty.value--;
-  }
-}
+// function incrementQuantity() {
+//   qty.value++;
+// }
+// function decrementQuantity(myId) {
+//   if (qty.value > 1) {
+//     qty.value--;
+//   }
+// }
