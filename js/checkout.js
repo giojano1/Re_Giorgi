@@ -5,10 +5,13 @@ const orderPopup = document.querySelector(".order_container");
 const overlay2 = document.querySelector(".overlay2");
 const finishCheckoutBtn = document.getElementById("finishCheckout");
 const goHomeBtn = document.getElementById("goHome");
+const removeAllBtn = document.getElementById("removeAllItems");
+const removeItemBtn = document.querySelectorAll(".removeItem");
 function showSummary() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = calculateTotalPrice(cart);
   let items = calculateTotalQuantity(cart);
+  summaryProduct.textContent = "";
   cart.forEach((product, index) => {
     // pratent div
     const cartItem = document.createElement("div");
@@ -63,7 +66,21 @@ finishCheckoutBtn.addEventListener("click", () => {
   orderPopup.style.display = "block";
   overlay2.style.display = "block";
   document.querySelector("body").style.overflow = "hidden";
+  setTimeout(() => {
+    window.location.href = "../index.html";
+  }, 2000);
 });
 goHomeBtn.addEventListener("click", () => {
   window.location.href = "../index.html";
+});
+removeAllBtn.addEventListener("click", () => {
+  showSummary();
+});
+
+removeItemBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log(removeItemBtn);
+    console.log("clicked");
+    showSummary();
+  });
 });

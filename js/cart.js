@@ -67,6 +67,7 @@ function updateCartPopup() {
     quantity.textContent = product.quantity;
     const removeButton = document.createElement("button");
     removeButton.textContent = "REMOVE";
+    removeButton.classList.add("removeItem");
     productNav.appendChild(quantity);
     productNav.appendChild(removeButton);
 
