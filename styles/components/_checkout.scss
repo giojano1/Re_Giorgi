@@ -13,6 +13,10 @@ body {
       margin: 60px auto;
       .checkout_content {
         @include container(1100px);
+        a {
+          color: $main-black;
+          opacity: 0.5;
+        }
         .checkout_row {
           @include flex(space-between, auto);
           margin: 30px 0px;
@@ -28,6 +32,14 @@ body {
             }
             .detail_container {
               margin-top: 40px;
+              .detail_cont_title {
+                @include flex(space-between, center);
+                span {
+                  font-size: 13px;
+                  border-bottom: 1px solid $main-black;
+                  padding-bottom: 5px;
+                }
+              }
               h3 {
                 font-size: 13px;
                 color: $main-orange;
@@ -39,7 +51,7 @@ body {
                 @include flex(space-between, center);
                 flex-wrap: wrap;
                 label {
-                  width: 48%;
+                  width: 49%;
                   span {
                     display: block;
                     font-size: 12px;
@@ -55,14 +67,162 @@ body {
                     padding: 0px 24px;
                   }
                 }
+                .phone_label {
+                  margin-top: 24px;
+                }
+                .address_label {
+                  width: 100%;
+                  margin-bottom: 24px;
+                }
+                .country_label {
+                  margin-top: 24px;
+                }
+              }
+              .card {
+                margin: 30px 0px;
+                @include flex(center, center);
+                img {
+                  max-width: 330px;
+                }
+              }
+              .card_details {
+                width: 80%;
+                margin: 0 auto;
+                label {
+                  span {
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 500;
+                  }
+                  input {
+                    width: 100%;
+                    margin-top: 8px;
+                    background-color: transparent;
+                    border: 1px solid $gray-bg;
+                    border-radius: 8px;
+                    height: 50px;
+                    padding: 0px 24px;
+                  }
+                }
+                .card_det2 {
+                  @include flex(space-between, center);
+                  label {
+                    width: 49%;
+                  }
+                }
               }
             }
           }
           .summary {
             background-color: $main-white;
             flex: 0.3;
+            height: fit-content;
             padding: 45px;
             border-radius: 8px;
+            h2 {
+              font-size: 18px;
+              font-weight: 500;
+              letter-spacing: 1px;
+            }
+            .summary_list {
+              margin: 30px 0px;
+              .cart_item {
+                @include flex(space-between, center);
+                &:not(:last-child) {
+                  margin-bottom: 22px;
+                }
+                .product {
+                  @include flex(auto, center);
+                  .product_img {
+                    background-color: $main-gray;
+                    padding: 10px;
+                    border-radius: 8px;
+                    img {
+                      width: 42px;
+                      height: 42px;
+                      object-fit: contain;
+                    }
+                  }
+                  .product_details {
+                    @include flex(auto, auto);
+                    flex-direction: column;
+                    margin-left: 16px;
+                    span {
+                      font-size: 15px;
+                      font-weight: 600;
+                      line-height: 25px;
+                    }
+                    p {
+                      font-size: 14px;
+                      opacity: 0.5;
+                      line-height: 25px;
+                    }
+                  }
+                }
+                .product_nav {
+                  @include flex(auto, center);
+
+                  span {
+                    font-size: 13px;
+                    font-weight: 600;
+                    opacity: 0.5;
+                  }
+                  button {
+                    margin-left: 10px;
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    padding: 8px 4px;
+                    background-color: $main-gray;
+                    border: none;
+                    transition: 250ms;
+                    &:hover {
+                      color: $main-orange;
+                      transition: 250ms;
+                    }
+                  }
+                }
+              }
+            }
+            .total,
+            .shipping {
+              @include flex(space-between, center);
+              margin-bottom: 10px;
+              p {
+                font-size: 15px;
+                line-height: 25px;
+                opacity: 0.5;
+              }
+              span {
+                font-size: 18px;
+                font-weight: 500;
+              }
+            }
+            .grand_total {
+              @include flex(space-between, center);
+              margin-top: 55px;
+              p {
+                font-size: 15px;
+                line-height: 25px;
+                opacity: 0.5;
+              }
+              span {
+                font-size: 18px;
+                font-weight: 500;
+                color: $main-orange;
+              }
+            }
+            #finishCheckout {
+              margin-top: 45px;
+              width: 100%;
+              background-color: $main-orange;
+              color: $main-white;
+              border: none;
+              text-align: center;
+              padding: 15px 0px;
+              font-size: 13px;
+              font-weight: 500;
+            }
           }
         }
       }
@@ -70,5 +230,5 @@ body {
   }
 }
 .gray {
-  background-color: $gray-bg !important;
+  background-color: $light-graybg !important;
 }

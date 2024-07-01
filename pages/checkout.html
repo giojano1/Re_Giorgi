@@ -67,7 +67,6 @@
           </div>
         </div>
       </div>
-      <div class="underline"></div>
     </header>
     <main>
       <section class="checkout_container">
@@ -87,7 +86,7 @@
                     <span>Email Address</span>
                     <input type="email" placeholder="giorgi@gmail.com" />
                   </label>
-                  <label>
+                  <label class="phone_label">
                     <span>Phone Number</span>
                     <input type="tel" placeholder="+995 555 555 555" />
                   </label>
@@ -95,25 +94,30 @@
               </div>
               <div class="detail_container">
                 <h3>SHIPPING INFO</h3>
-                <label>
-                  <span>Address</span>
-                  <input type="text" placeholder="1137 Williams Avenue" />
-                </label>
-                <label>
-                  <span>ZIP Code</span>
-                  <input type="text" placeholder="10001" />
-                </label>
-                <label>
-                  <span>City</span>
-                  <input type="text" placeholder="Tbilisi" />
-                </label>
-                <label>
-                  <span>Country</span>
-                  <input type="text" placeholder="Georgia" />
-                </label>
+                <div class="input_cont">
+                  <label class="address_label">
+                    <span>Address</span>
+                    <input type="text" placeholder="1137 Williams Avenue" />
+                  </label>
+                  <label>
+                    <span>ZIP Code</span>
+                    <input type="text" placeholder="10001" />
+                  </label>
+                  <label>
+                    <span>City</span>
+                    <input type="text" placeholder="Tbilisi" />
+                  </label>
+                  <label class="country_label">
+                    <span>Country</span>
+                    <input type="text" placeholder="Georgia" />
+                  </label>
+                </div>
               </div>
               <div class="detail_container">
-                <h3>PAYMENT DETAILS</h3>
+                <div class="detail_cont_title">
+                  <h3>PAYMENT DETAILS</h3>
+                  <span>Credit Card</span>
+                </div>
                 <div class="card">
                   <img src="../assets/webp/credit-card.webp" alt="card" />
                 </div>
@@ -124,7 +128,7 @@
                   <label>
                     <input type="text" placeholder="Card Number" />
                   </label>
-                  <div>
+                  <div class="card_det2">
                     <label>
                       <input type="text" placeholder="Exp.Date" />
                     </label>
@@ -140,7 +144,7 @@
               <div class="summary_list"></div>
               <div class="total">
                 <p>TOTAL</p>
-                <span>$</span>
+                <span id="summaryTotal">$</span>
               </div>
               <div class="shipping">
                 <p>SHIPPING</p>
@@ -148,13 +152,15 @@
               </div>
               <div class="grand_total">
                 <p>GRAND TOTAL</p>
-                <span>$</span>
+                <span id="summaryGrandTotal">$</span>
               </div>
-              <button>CONTINUE & PAY</button>
+              <button id="finishCheckout">CONTINUE & PAY</button>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="../js/cart.js"></script>
+    <script src="../js/checkout.js"></script>
   </body>
 </html>
