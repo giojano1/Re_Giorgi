@@ -1,6 +1,10 @@
 const summaryProduct = document.querySelector(".summary_list");
 const summaryTotalPrice = document.getElementById("summaryTotal");
 const summaryGrandTotalPrice = document.getElementById("summaryGrandTotal");
+const orderPopup = document.querySelector(".order_container");
+const overlay2 = document.querySelector(".overlay2");
+const finishCheckoutBtn = document.getElementById("finishCheckout");
+const goHomeBtn = document.getElementById("goHome");
 function showSummary() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = calculateTotalPrice(cart);
@@ -55,3 +59,11 @@ function showSummary() {
   summaryGrandTotalPrice.textContent = `$ ${total + 50}`;
 }
 showSummary();
+finishCheckoutBtn.addEventListener("click", () => {
+  orderPopup.style.display = "block";
+  overlay2.style.display = "block";
+  document.querySelector("body").style.overflow = "hidden";
+});
+goHomeBtn.addEventListener("click", () => {
+  window.location.href = "../index.html";
+});

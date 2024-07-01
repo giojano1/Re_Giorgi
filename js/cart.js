@@ -2,6 +2,7 @@ const cartBtn = document.querySelector(".cart_btn");
 const cartPopup = document.querySelector(".cart_popup");
 const overlay = document.querySelector(".overlay");
 const cartContent = document.querySelector(".cart_content");
+const goToCheckout = document.getElementById("checkout");
 // show hide cart
 cartBtn.addEventListener("click", () => {
   cartPopup.style.display = "block";
@@ -93,3 +94,6 @@ function updateCartPopup() {
   });
 }
 updateCartPopup();
+goToCheckout.addEventListener("click", () => {
+  window.location.href = "../pages/checkout.html";
+});
