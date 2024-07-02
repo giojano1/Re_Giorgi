@@ -6,7 +6,6 @@ const overlay2 = document.querySelector(".overlay2");
 const finishCheckoutBtn = document.getElementById("finishCheckout");
 const goHomeBtn = document.getElementById("goHome");
 const removeAllBtn = document.getElementById("removeAllItems");
-const removeItemBtn = document.querySelectorAll(".removeItem");
 function showSummary() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = calculateTotalPrice(cart);
@@ -77,10 +76,17 @@ removeAllBtn.addEventListener("click", () => {
   showSummary();
 });
 
-removeItemBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    console.log(removeItemBtn);
-    console.log("clicked");
-    showSummary();
-  });
+cartBtn.addEventListener("click", () => {
+  removeItemFromSummary();
 });
+
+function removeItemFromSummary() {
+  const removeItemBtn = document.querySelectorAll(".removeItem");
+  removeItemBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log(removeItemBtn);
+      console.log("clicked");
+      showSummary();
+    });
+  });
+}

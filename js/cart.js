@@ -75,6 +75,8 @@ function updateCartPopup() {
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartPopup();
+      cartPopup.style.display = "none";
+      overlay.style.display = "none";
     });
 
     cartItem.appendChild(productDiv);
