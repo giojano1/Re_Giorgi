@@ -1,8 +1,11 @@
 // burger menu
 const btn = document.querySelector(".menu_btn");
+const mobileMenu = document.querySelector(".mobile_menu");
 btn.addEventListener("click", () => {
   btn.classList.toggle("open");
+  mobileMenu.classList.toggle("show");
 });
+
 // swiper
 const swiper = new Swiper(".feedback_swiper", {
   direction: "horizontal",

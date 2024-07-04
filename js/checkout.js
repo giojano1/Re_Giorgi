@@ -6,6 +6,14 @@ const overlay2 = document.querySelector(".overlay2");
 const finishCheckoutBtn = document.getElementById("finishCheckout");
 const goHomeBtn = document.getElementById("goHome");
 const removeAllBtn = document.getElementById("removeAllItems");
+// burger menu
+const btn = document.querySelector(".menu_btn");
+const mobileMenu = document.querySelector(".mobile_menu");
+btn.addEventListener("click", () => {
+  btn.classList.toggle("open");
+  mobileMenu.classList.toggle("show");
+});
+
 function showSummary() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = calculateTotalPrice(cart);

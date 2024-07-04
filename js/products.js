@@ -4,6 +4,15 @@ const nextButton = document.getElementById("nextButton");
 let currentPage = 1;
 const limit = 2;
 let products = [];
+
+// burger menu
+const btn = document.querySelector(".menu_btn");
+const mobileMenu = document.querySelector(".mobile_menu");
+btn.addEventListener("click", () => {
+  btn.classList.toggle("open");
+  mobileMenu.classList.toggle("show");
+});
+
 fetch("../products.json")
   .then((res) => res.json())
   .then((data) => {
