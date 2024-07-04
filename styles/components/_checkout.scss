@@ -20,6 +20,9 @@ body {
         .checkout_row {
           @include flex(space-between, auto);
           margin: 30px 0px;
+          @include responsive(m-tablet) {
+            flex-direction: column;
+          }
           .checkout {
             background-color: $main-white;
             flex: 0.67;
@@ -52,6 +55,12 @@ body {
                 flex-wrap: wrap;
                 label {
                   width: 49%;
+                  @include responsive(s-tablet) {
+                    width: 100%;
+                    &:not(:last-child) {
+                      margin-bottom: 24px;
+                    }
+                  }
                   span {
                     display: block;
                     font-size: 12px;
@@ -69,13 +78,22 @@ body {
                 }
                 .phone_label {
                   margin-top: 24px;
+                  @include responsive(s-tablet) {
+                    margin-top: 0px;
+                  }
                 }
                 .address_label {
                   width: 100%;
                   margin-bottom: 24px;
+                  @include responsive(s-tablet) {
+                    margin-top: 0px;
+                  }
                 }
                 .country_label {
                   margin-top: 24px;
+                  @include responsive(s-tablet) {
+                    margin-top: 0px;
+                  }
                 }
               }
               .card {
@@ -83,6 +101,7 @@ body {
                 @include flex(center, center);
                 img {
                   max-width: 330px;
+                  width: 100%;
                 }
               }
               .card_details {
@@ -119,6 +138,9 @@ body {
             height: fit-content;
             padding: 45px;
             border-radius: 8px;
+            @include responsive(m-tablet) {
+              margin-top: 32px;
+            }
             h2 {
               font-size: 18px;
               font-weight: 500;

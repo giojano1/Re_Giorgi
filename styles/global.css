@@ -1684,6 +1684,11 @@ body main .checkout_container .checkout_content .checkout_row {
   align-items: auto;
   margin: 30px 0px;
 }
+@media only screen and (max-width: 900px) {
+  body main .checkout_container .checkout_content .checkout_row {
+    flex-direction: column;
+  }
+}
 body main .checkout_container .checkout_content .checkout_row .checkout {
   background-color: #ffffff;
   flex: 0.67;
@@ -1724,6 +1729,14 @@ body main .checkout_container .checkout_content .checkout_row .checkout .detail_
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label {
   width: 49%;
 }
+@media only screen and (max-width: 600px) {
+  body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label {
+    width: 100%;
+  }
+  body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont label span {
   display: block;
   font-size: 12px;
@@ -1741,12 +1754,27 @@ body main .checkout_container .checkout_content .checkout_row .checkout .detail_
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont .phone_label {
   margin-top: 24px;
 }
+@media only screen and (max-width: 600px) {
+  body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont .phone_label {
+    margin-top: 0px;
+  }
+}
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont .address_label {
   width: 100%;
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 600px) {
+  body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont .address_label {
+    margin-top: 0px;
+  }
+}
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont .country_label {
   margin-top: 24px;
+}
+@media only screen and (max-width: 600px) {
+  body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .input_cont .country_label {
+    margin-top: 0px;
+  }
 }
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .card {
   margin: 30px 0px;
@@ -1756,6 +1784,7 @@ body main .checkout_container .checkout_content .checkout_row .checkout .detail_
 }
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .card img {
   max-width: 330px;
+  width: 100%;
 }
 body main .checkout_container .checkout_content .checkout_row .checkout .detail_container .card_details {
   width: 80%;
@@ -1790,6 +1819,11 @@ body main .checkout_container .checkout_content .checkout_row .summary {
   height: fit-content;
   padding: 45px;
   border-radius: 8px;
+}
+@media only screen and (max-width: 900px) {
+  body main .checkout_container .checkout_content .checkout_row .summary {
+    margin-top: 32px;
+  }
 }
 body main .checkout_container .checkout_content .checkout_row .summary h2 {
   font-size: 18px;
